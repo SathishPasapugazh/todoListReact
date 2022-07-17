@@ -40,7 +40,7 @@ setInputName("");
       </div>
       <div>
         <ul>        
-          {newArray.map((nameNum, i) => {                     
+          {newArray.map((nameNum) => {                     
             return <List listName={nameNum} /> }
             )}
         </ul>
