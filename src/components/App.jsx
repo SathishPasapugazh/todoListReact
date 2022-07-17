@@ -6,6 +6,7 @@ function App(props) {
 const [inputName, setInputName] = useState("");
 const [addName, setAddName]= useState("");
 const newArray= [...addName];
+//console.log(addName);
 
 function handleChange(event){
   const value = event.target.value;
@@ -14,6 +15,7 @@ setInputName(value);
 }
 function handleClick(event) {
 setAddName(preValue => [...preValue, inputName])
+
 setInputName("");
 }
 //console.log(addName);
@@ -38,13 +40,15 @@ setInputName("");
       </div>
       <div>
         <ul>        
-          {newArray.map(nameNum => {
-            return <List listName={nameNum} />}
+          {newArray.map((nameNum, i) => {                     
+            return <List listName={nameNum} /> }
             )}
         </ul>
       </div>
     </div>
   );
+  
 }
+
 
 export default App;
