@@ -24,10 +24,7 @@ setInputName("");
 // <List listName = {addName} />;
 //}
 
-function submit(nameNum) {
-  return (<List listName={nameNum} />
-  );
-}
+
   return (
     <div className="container">
       <div className="heading">
@@ -40,9 +37,10 @@ function submit(nameNum) {
         </button>
       </div>
       <div>
-        <ul>
-        
-          {newArray.map(submit)}
+        <ul>        
+          {newArray.map(nameNum => {
+            return <List listName={nameNum} />}
+            )}
         </ul>
       </div>
     </div>
